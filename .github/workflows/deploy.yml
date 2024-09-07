@@ -11,7 +11,8 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
-        server: ftp.cln-backend.tech
+        server: 45.130.228.171
         username: u169248821.example
         password: '@Rhian12345'
         server-dir: /home/u169248821/domains/cln-backend.tech/public_html/demo
+        protocol: ftp
