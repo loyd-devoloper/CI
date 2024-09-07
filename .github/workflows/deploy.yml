@@ -25,3 +25,12 @@ jobs:
       run: |
         composer update
         php artisan key:generate
+    - name: Run Remote/Artisan Commands
+      uses: appleboy/ssh-action@v0.1.6
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.SSH_PRIVATE_KEY }}
+        script: |
+          cd /domains/cln-backend.tech/public_html/new/
+          php artisan optimize
