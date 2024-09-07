@@ -7,6 +7,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>example of CI/CD</h1>
     <form action="/store" method="POST">
         @csrf
         <input type="text" name="name" placeholder="name">
