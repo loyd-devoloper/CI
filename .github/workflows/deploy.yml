@@ -26,7 +26,7 @@ jobs:
         SOURCE: "."
         REMOTE_HOST: ${{ secrets.VPS_HOST }}
         REMOTE_USER: ${{ secrets.VPS_USER }}
-        TARGET: "/domains/cln-backend.tech/public_html/"
+        TARGET: "/domains/cln-backend.tech/public_html/sample/"
 
     - name: Run Remote/Artisan Commands
       uses: appleboy/ssh-action@v0.1.6
@@ -35,6 +35,5 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /domains/cln-backend.tech/public_html/
-          composer install
-          php artisan optimize
+          cd /domains/cln-backend.tech/public_html/sample/
+
