@@ -13,5 +13,5 @@ jobs:
       with:
         server: ftp://goldenmamihouse.com
         username: u169248821.cln-backend.tech
-        password: @Rhian16
+        password: '@Rhian16'
         server-dir: /public_html/laravel-demo/
