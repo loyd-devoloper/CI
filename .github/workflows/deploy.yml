@@ -31,5 +31,5 @@ jobs:
         port: 65002
         script: |
           cd domains/cln-backend.tech/public_html/
-          composer update
+          composer2 update
           php artisan optimize
