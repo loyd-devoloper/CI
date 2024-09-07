@@ -21,10 +21,7 @@ jobs:
         protocol: ftp
     - name: Copy .env file
       run: cp .env.example .env
-    - name: Run commands
-      run: |
-        composer update
-        php artisan key:generate
+
     - name: Run Remote/Artisan Commands
       uses: appleboy/ssh-action@v0.1.6
       with:
@@ -33,5 +30,7 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 65002
         script: |
-          cd /domains/cln-backend.tech/public_html/new/
+          cd /domains/cln-backend.tech/public_html/
+          composer update
+          php artisan key:generate
           php artisan optimize
