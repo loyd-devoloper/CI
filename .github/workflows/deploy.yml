@@ -31,5 +31,7 @@ jobs:
         port: 65002
         script: |
           cd domains/cln-backend.tech/public_html/
+          cp .env.example .env
           composer2 update
+          php artisan key:generate
           php artisan optimize
