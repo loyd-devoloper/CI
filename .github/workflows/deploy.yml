@@ -23,5 +23,5 @@ jobs:
       run: cp .env.example .env
     - name: Run commands
       run: |
-        composer install
+        composer update
         php artisan key:generate
