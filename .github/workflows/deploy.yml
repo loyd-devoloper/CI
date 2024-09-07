@@ -14,5 +14,5 @@ jobs:
         server: 45.130.228.171
         username: u169248821.example
         password: '@Rhian12345'
-        server-dir: /public_html/new/
+        server-dir: /
         protocol: ftp
