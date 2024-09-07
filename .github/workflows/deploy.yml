@@ -32,5 +32,5 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         script: |
-          cd /domains/cln-backend.tech/public_html/new/
+          cd /domains/cln-backend.tech/public_html/news/
           php artisan optimize
