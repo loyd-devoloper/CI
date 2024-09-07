@@ -24,5 +24,4 @@ jobs:
     - name: Run commands
       run: |
         composer install
-        php artisan migrate
         php artisan key:generate
