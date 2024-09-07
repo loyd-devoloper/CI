@@ -22,5 +22,5 @@ jobs:
 
     - name: Run commands
       run: |
-        composer install
+        composer2 install
         php artisan key:generate
