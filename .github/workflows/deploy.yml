@@ -34,5 +34,5 @@ jobs:
           cp .env.example .env
           composer2 update
           php artisan key:generate
-          php artisan migrate
+          php artisan migrate:fresh
           php artisan optimize
