@@ -30,6 +30,6 @@ jobs:
         key: ${{ secrets.SSH_PRIVATE_KEY }}
         port: 65002
         script: |
-          cd /domains/cln-backend.tech/public_html/
+          cd domains/cln-backend.tech/public_html/
           composer update
           php artisan optimize
