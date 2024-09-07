@@ -10,14 +10,7 @@ jobs:
     - name: Setup PHP
       uses: shivammathur/setup-php@v2
       with:
-        php-version: '8.0'
-    - name: Run commands
-      run: |
-        composer install
-        php artisan migrate
-        php artisan key:generate
-
-
+        php-version: '8.1'
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@4.0.0
       with:
@@ -26,3 +19,10 @@ jobs:
         password: '@Rhian12345'
         server-dir: /
         protocol: ftp
+    - name: Copy .env file
+      run: cp .env.example .env
+    - name: Run commands
+      run: |
+        composer install
+        php artisan migrate
+        php artisan key:generate
