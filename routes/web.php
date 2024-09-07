@@ -1,5 +1,6 @@
 <?php
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $students = \App\Models\Student::all();
+    return view('welcome',compact('students'));
+});
+Route::post('/store',function(Request $request)
+{
+    \App\Models\Student::create(['name'=>$request->name]);
+    return redirect('/');
 });

@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    hello x
+    <form action="/store" method="POST">
+        @csrf
+        <input type="text" name="name" placeholder="name">
+        <button type="submit">submit</button>
+    </form>
+
+    @foreach ($students as $student)
+        <li>{{ $student->name }}</li>
+    @endforeach
 </body>
 </html>
