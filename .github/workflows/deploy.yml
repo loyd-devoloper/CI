@@ -31,6 +31,7 @@ jobs:
         host: ${{ secrets.VPS_HOST }}
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.SSH_PRIVATE_KEY }}
+        port: 65002
         script: |
           cd /domains/cln-backend.tech/public_html/new/
           php artisan optimize
