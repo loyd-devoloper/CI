@@ -19,8 +19,7 @@ jobs:
         password: '@Rhian12345'
         server-dir: /
         protocol: ftp
-    - name: Copy .env file
-      run: cp .env.example .env
+
     - name: Run commands
       run: |
         composer install
